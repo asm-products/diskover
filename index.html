@@ -211,9 +211,9 @@
 
             subscribe($(this));
           });
-        $(window).unload(function() {
+        
+            // fix the body going down
             $('body').scrollTop(0);
-        });
         
         }).fail(function(err) {
           console.error(err);
