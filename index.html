@@ -12,12 +12,6 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,900" type="text/css">
   <link rel="stylesheet" href="style.css" type="text/css">
-  
-  <script>
-$(window).unload(function() {
-    $('body').scrollTop(0);
-});
-</script>
 </head>
 <body>
   <div class="site-wrapper">
@@ -217,6 +211,10 @@ $(window).unload(function() {
 
             subscribe($(this));
           });
+        $(window).unload(function() {
+            $('body').scrollTop(0);
+        });
+        
         }).fail(function(err) {
           console.error(err);
         });
