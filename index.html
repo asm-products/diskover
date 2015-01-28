@@ -27,15 +27,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
   <script id="template" type="text/x-handlebars-template">
-    <!-- div class="cover-container" -->
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h1 class="masthead-brand"><a href="https://assembly.com/{{slug}}">{{name}}</a></h1>
-        </div>
-      </div>
-
-      <div class="inner cover">     
-          
+      <div class="inner cover">             
         <div class="container">
           <div class="jumbotron">
             <div class="col-sm-3">
@@ -43,7 +35,10 @@
                 <a href="https://assembly.com/{{slug}}">
                   <img src={{poster_image_url}} width="100px">
                 </a>
-              {{/if}}  
+              {{/if}}
+              <div class="inner">
+                <h1 class="masthead-brand"><a href="https://assembly.com/{{slug}}">{{name}}</a></h1>
+              </div>
             </div>
             <div class="col-sm-9">
               <h2 class="cover-heading">{{pitch}}</h2>
