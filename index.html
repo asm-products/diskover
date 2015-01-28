@@ -34,20 +34,23 @@
         </div>
       </div>
 
-      <div class="inner cover">
-        
-        {{#if poster_image_url}}
-          <a href="https://assembly.com/{{slug}}">
-            <img src={{poster_image_url}} width="100px">
-          </a>
-        {{/if}}       
+      <div class="inner cover">     
           
         <div class="container">
           <div class="jumbotron">
-            <h2 class="cover-heading">{{pitch}}</h2>
-            {{#if description}}
+            <div class="col-sm-3">
+              {{#if poster_image_url}}
+                <a href="https://assembly.com/{{slug}}">
+                  <img src={{poster_image_url}} width="100px">
+                </a>
+              {{/if}}  
+            </div>
+            <div class="col-sm-9">
+              <h2 class="cover-heading">{{pitch}}</h2>
+              {{#if description}}
                 <p class="lead">{{description}}</p>
-            {{/if}}
+              {{/if}}
+            </div>
           </div>
           <div class="row">
             <div class="col-sm-4">
