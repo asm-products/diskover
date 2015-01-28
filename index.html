@@ -40,19 +40,14 @@
           <a href="https://assembly.com/{{slug}}">
             <img src={{poster_image_url}} width="100px">
           </a>
-        {{/if}}
-          
-        <h2 class="cover-heading">{{pitch}}</h2>
-
-        {{#if description}}
-          <p class="lead">{{description}}</p>
-        {{/if}}
-          
+        {{/if}}       
           
         <div class="container">
           <div class="jumbotron">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p> 
+            <h2 class="cover-heading">{{pitch}}</h2>
+            {{#if description}}
+                <p class="lead">{{description}}</p>
+            {{/if}}
           </div>
           <div class="row">
             <div class="col-sm-4">
