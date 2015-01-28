@@ -173,6 +173,8 @@
           <p>Layout based on the Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
       </div>
+    
+      $('body').scrollTop(0);
   </script>
 
   <script>
@@ -211,9 +213,6 @@
 
             subscribe($(this));
           });
-        
-            // fix the body going down
-            $('body').scrollTop(0);
         
         }).fail(function(err) {
           console.error(err);
