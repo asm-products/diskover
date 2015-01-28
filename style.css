@@ -34,7 +34,7 @@ body {
 }
 
 body {
-/*  color: #222;
+ color: #222;
   text-align: center;
    http://codepen.io/mrrocks/pen/EiplA 
   display: -webkit-box;
@@ -48,7 +48,7 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; */
+  justify-content: center;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
