@@ -30,11 +30,11 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+/*  height: 100%; */
 }
 
 body {
- color: #222;
+/*  color: #222;
   text-align: center;
    http://codepen.io/mrrocks/pen/EiplA 
   display: -webkit-box;
@@ -48,7 +48,7 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -83,19 +83,19 @@ body {
 }
 
 .masthead-nav > li {
-  display: inline-block;
+/*  display: inline-block; */
 }
 .masthead-nav > li + li {
   margin-left: 20px;
 }
 .masthead-nav > li > a {
-  padding-right: 0;
+ /* padding-right: 0;
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #222; /* IE8 proofing */
-  color: #222;
-  border-bottom: 2px solid transparent;
+  color: #222; *//* IE8 proofing */
+/*  color: #222;
+  border-bottom: 2px solid transparent; */
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -116,11 +116,11 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+/*  padding: 0 20px;  */
 }
 .cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+ /* padding: 10px 20px;
+  font-weight: bold; */
 }
 
 
