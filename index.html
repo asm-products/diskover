@@ -35,19 +35,44 @@
       </div>
 
       <div class="inner cover">
-        <div class="span2">
+        
         {{#if poster_image_url}}
           <a href="https://assembly.com/{{slug}}">
             <img src={{poster_image_url}} width="100px">
           </a>
         {{/if}}
-        </div>
-        <div class="span10">
+          
         <h2 class="cover-heading">{{pitch}}</h2>
 
         {{#if description}}
           <p class="lead">{{description}}</p>
         {{/if}}
+          
+          
+        <div class="container">
+          <div class="jumbotron">
+            <h1>My First Bootstrap Page</h1>
+            <p>Resize this responsive page to see the effect!</p> 
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>        
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+          </div>
+        </div>
+  
 
         <style>
           .alert {
@@ -90,7 +115,6 @@
             </li>
           {{/each}}
         </ul>
-      </div>>
       </div>
       <div class="mastfoot">
         <div class="inner">
