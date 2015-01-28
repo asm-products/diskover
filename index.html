@@ -35,12 +35,14 @@
       </div>
 
       <div class="inner cover">
+        <div class="span2">
         {{#if poster_image_url}}
           <a href="https://assembly.com/{{slug}}">
-            <img src={{poster_image_url}} width="200px">
+            <img src={{poster_image_url}} width="100px">
           </a>
         {{/if}}
-
+        <div>
+        <div class="span10">
         <h2 class="cover-heading">{{pitch}}</h2>
 
         {{#if description}}
@@ -88,7 +90,7 @@
             </li>
           {{/each}}
         </ul>
-
+      </div>>
       </div>
       <div class="mastfoot">
         <div class="inner">
