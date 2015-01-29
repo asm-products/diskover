@@ -23,6 +23,19 @@ a:hover {
   border: 1px solid #fff;
 }
 
+p {
+  font-size: 18px; 
+}
+h1 {
+  font-size: 34px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 26px;
+}
+
 
 /*
  * Base structure
@@ -34,9 +47,9 @@ body {
 }
 
 body {
-/*  color: #222;
+  color: #222;
   text-align: center;
-   http://codepen.io/mrrocks/pen/EiplA 
+ /*  http://codepen.io/mrrocks/pen/EiplA 
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,6 +84,7 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+  text-align: center;
 }
 
 

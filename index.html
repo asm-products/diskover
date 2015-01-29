@@ -33,11 +33,11 @@
             <div class="col-sm-3">
               {{#if poster_image_url}}
                 <a href="https://assembly.com/{{slug}}">
-                  <img src={{poster_image_url}} width="100px">
+                  <img src={{poster_image_url}} width="140px">
                 </a>
               {{/if}}
               <div class="inner">
-                <h1 class="masthead-brand"><a href="https://assembly.com/{{slug}}">{{name}}</a></h1>
+                <h1 class="masthead-brand"><strong><a href="https://assembly.com/{{slug}}">{{name}}</a></strong></h1>
               </div>
             </div>
             <div class="col-sm-9">
@@ -47,21 +47,22 @@
               {{/if}}
             </div>
           </div>
+          
           <div class="row">
             <div class="col-sm-4">
-              <h3>Column 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <p><em>The simplest way to describe the idea is by saying that it is focused on <strong>giving to the user all the near activities that he can find on any interest</strong></em>.<br>
+Simplifying things, using the application the user will slideshow previews of events in his area, when he does not like it or is not interested on the event that is displayed he just has to click on a <strong>Next button </strong>to see a new one and when he does like it he has to click to the <strong>Diskover button</strong>, that will send him to the details page for that event.<br></p>
             </div>
             <div class="col-sm-4">
-              <h3>Column 2</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <p>During these actions done by the user, the application will collect the user information to be able to profile the user in order to show better suggestions next time.<br>
+So as a user, I will be able to find what I am really interested on that is happening around me because the application is tracking my favorites events and the events that I was not interested on.  <br>
+This part will be the core and in my opinion is what will give a plus to it.<br><br></p>
             </div>
-            <div class="col-sm-4">
-              <h3>Column 3</h3>        
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            <div class="col-sm-4">  
+              <p>This product is build by Assembly.</p>
+              <h3><strong>How Assembly Works</strong></h3><br>
+<p>Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.<br>
+Visit <a href="//assembly.com">Assembly</a> to learn more.</p>
             </div>
           </div>
         </div>
@@ -108,13 +109,10 @@
             </li>
           {{/each}}
         </ul>
-    </div>
-      <div class="mastfoot">
-        <div class="inner">
           <p>Made with ♥ on <a href="//assembly.com">Assembly</a></p>
           <p>Layout based on the Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
-      </div>
+    </div>
   </script>
 
   <script>
