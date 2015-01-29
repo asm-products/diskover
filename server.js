@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;        //set our port 
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://developer:developer@ds053838.mongolab.com:53838/diskover-db
+mongoose.connect('mongodb://developer:developer@ds053838.mongolab.com:53838/diskover-db');
 
 var Bear        = require('./app/models/bear');
 
@@ -23,12 +23,50 @@ var Bear        = require('./app/models/bear');
 // ==========================================================================
 var router = express.Router();
 
+//middleware to use for all the requests
+router.use(function(req, res, next) {
+  //do logging
+  console.log('- API request received');
+  next(); //make sure we go to the next routes and we do not stop here
+});
+
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
 });
 
 // more routes for our API will happen here
+
+// on routes that end in /bears
+// ===========================================================================
+router.route('/bears')
+  // create a bear (accessed at POST http://localhost:8080/api/bears)
+  .post(function(req, res) {
+  
+    var bear = new Bear();      // create a new instance of the bear model
+    bear.name = req.body.name;  // set the bears name (comes from the request)
+  
+    Console.log(req.body.name);
+  
+    // save the bear and check for errors
+    bear.save(function(err){
+      if(err)
+          res.send(err);
+      
+      res.json({ message: 'Bear created!'});
+    });
+  })
+
+  .get(function(req, res) {
+    Bear.find(function(err, bears){
+      if (err)
+        res.send(err);
+      
+      res.json(bears);
+    });
+  });
+
+
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
