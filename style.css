@@ -10,7 +10,7 @@
 a,
 a:focus,
 a:hover {
-  color: #222;
+  color: red;
 }
 
 /* Custom default button */
@@ -24,13 +24,14 @@ a:hover {
 }
 
 p {
-  font-size: 18px; 
+  font-size: 18px;
+  text-align: left;
 }
 h1 {
   font-size: 34px;
 }
 h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 h3 {
   font-size: 26px;
@@ -49,6 +50,8 @@ body {
 body {
   color: #222;
   text-align: center;
+  font-family: 'Signika', sans-serif;
+  font-weight: 400;
  /*  http://codepen.io/mrrocks/pen/EiplA 
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,6 +65,13 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; */
+}
+
+.container {
+  padding: 40px;
+  background-color: black;
+  color: white;
+  margin-bottom: 40px;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -83,7 +93,8 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 10px;
+  padding-bottom: -10px;
   text-align: center;
 }
 
@@ -92,8 +103,12 @@ body {
  * Header
  */
 .masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.masthead-subtitle {
+  font-size: 40px;
+  padding-top: 6px;
 }
 
 .masthead-nav > li {
