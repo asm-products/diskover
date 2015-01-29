@@ -14,6 +14,11 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;        //set our port 
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://developer:developer@ds053838.mongolab.com:53838/diskover-db
+
+var Bear        = require('./app/models/bear');
+
 //Routes for our API 
 // ==========================================================================
 var router = express.Router();
