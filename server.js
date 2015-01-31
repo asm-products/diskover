@@ -45,8 +45,8 @@ router.route('/bears')
   
     var bear = new Bear();      // create a new instance of the bear model
     bear.name = req.body.name;  // set the bears name (comes from the request)
-  
-    Console.log(req.body.name);
+    
+    console.log('INSERT: ' + req.body.name);
   
     // save the bear and check for errors
     bear.save(function(err){
