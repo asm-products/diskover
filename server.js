@@ -44,6 +44,10 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+//should follow this example:
+//https://github.com/strongloop/express/blob/master/examples/route-separation/index.js
+app.get('/api/bears/list', bears.list);
+
 // START THE SERVER
 // ===========================================================================
 app.listen(port);

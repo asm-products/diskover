@@ -6,18 +6,12 @@ module.exports = function(app){
   var router = express.Router();
   console.log('Bear extracted');
   
-  router.use(function(req, res, next) {
-    //do logging
-    console.log('- BEAR API request received');
-    next(); //make sure we go to the next routes and we do not stop here
-  });
-  
-  router.get('/api/bear', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
-  });
-  
-  router.post('/api/bear', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
-  });
+  module.exports.list = function(req, res){
+   res.send("respond with a resource");
+  };
+
+  module.exports.delete = function(req, res){
+   res.send("delete user");
+  };
   
 };
