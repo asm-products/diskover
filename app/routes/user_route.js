@@ -1,3 +1,27 @@
+module.exports = function(app){
+  // on routes that end in /users
+  //  ===========================================================================
+  // call the packages we need 
+  var express     = require('express');       // call express
+  var router = express.Router();
+  console.log('User extracted');
+  
+  router.use(function(req, res, next) {
+    //do logging
+    console.log('- user API request received');
+    next(); //make sure we go to the next routes and we do not stop here
+  });
+  
+  router.get('/api/user', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+  });
+  
+  router.post('/api/user', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+  });
+  
+};
+
 /*  //middleware to use for all the requests
   router.use(function(req, res, next) {
     //do logging

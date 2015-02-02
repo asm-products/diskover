@@ -29,13 +29,13 @@ router.get('/', function(req, res) {
 });
 
 // mapping the routes
-
 var bears = require('./app/routes/bear_route');
-
+var users = require('./app/routes/user_route');
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api/bears', bears);
+app.use('/api/users', users);
 
 // START THE SERVER
 // ===========================================================================

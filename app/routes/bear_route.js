@@ -12,11 +12,11 @@ module.exports = function(app){
     next(); //make sure we go to the next routes and we do not stop here
   });
   
-  router.get('/', function(req, res) {
+  router.get('/api/bear', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
   });
   
-  router.post('/', function(req, res) {
+  router.post('/api/bear', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
   });
   
