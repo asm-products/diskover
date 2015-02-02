@@ -16,4 +16,8 @@ module.exports = function(app){
     res.json({ message: 'hooray! welcome to our api!' });   
   });
   
+  router.post('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+  });
+  
 };
