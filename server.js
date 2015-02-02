@@ -37,6 +37,13 @@ var users = require('./app/routes/user_route');
 app.use('/api/bears', bears);
 app.use('/api/users', users);
 
+/// catch 404 and forwarding to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
 // START THE SERVER
 // ===========================================================================
 app.listen(port);
