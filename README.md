@@ -1,6 +1,6 @@
 # Diskover
 
-<a href="https://assembly.com/payzo/bounties"><img src="https://asm-badger.herokuapp.com/diskover/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
+<a href="https://assembly.com/diskover/bounties"><img src="https://asm-badger.herokuapp.com/diskover/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
 
 ## Never miss the coolest things around you
 
