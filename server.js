@@ -34,8 +34,8 @@ var users = require('./app/routes/user_route');
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/api/bears', bears);
-app.use('/api/users', users);
+//app.use('/api/bears', bears);
+//app.use('/api/users', users);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -46,7 +46,17 @@ app.use(function(req, res, next) {
 
 //should follow this example:
 //https://github.com/strongloop/express/blob/master/examples/route-separation/index.js
-app.get('/api/bears/list', bears.list);
+
+// User
+
+//app.get('/users', user.list);
+// app.all('/user/:id/:op?', user.load);
+// app.get('/user/:id', user.view);
+// app.get('/user/:id/view', user.view);
+// app.get('/user/:id/edit', user.edit);
+// app.put('/user/:id/edit', user.update);
+
+//app.get('/api/user/list', users.list);
 
 // START THE SERVER
 // ===========================================================================
