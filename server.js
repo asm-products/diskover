@@ -1,35 +1,3 @@
-
-
-// //Routes for our API 
-// // ==========================================================================
-// var router = express.Router();
-
-// // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-// router.get('/', function(req, res) {
-//     res.json({ message: 'hooray! welcome to our api!' });   
-// });
-
-// // mapping the routes
-// var bears = require('./app/routes/bear_route');
-// var users = require('./app/routes/user_route');
-
-// // REGISTER OUR ROUTES -------------------------------
-// // all of our routes will be prefixed with /api
-// //app.use('/api/bears', bears);
-// app.use('/api/users', users);
-
-// //should follow this example:
-// //https://github.com/strongloop/express/blob/master/examples/route-separation/index.js
-
-// // User
-
-// app.get('/users', user.list);
-
-// //app.get('/api/user/list', users.list);
-
-
-///////////////////////////////////////////////////////////////////////////
-
 //server.js
 
 //Base setup 
