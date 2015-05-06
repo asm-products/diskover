@@ -32,7 +32,7 @@ router.use(function(req, res, next) {
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: '- Basic API call' });   
+    res.json({ message: ' basic API call' });   
 });
 
 // on routes that end in /bears
@@ -40,9 +40,11 @@ router.get('/', function(req, res) {
 router.route('/event')
   // create a event (accessed at POST http://localhost:8080/api/event)
   .post(function(req, res) {
+      res.json({ message : 'post event'});
   })
 
   .get(function(req, res) {
+      res.json({ message: 'get event'});
   });
 
 // REGISTER OUR ROUTES -------------------------------

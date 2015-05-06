@@ -3,7 +3,7 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
-var BearSchema  = new Schema({
+var EventSchema  = new Schema({
   name: String
 });
 
