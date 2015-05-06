@@ -24,3 +24,6 @@ body-parser will let us pull POST content from our HTTP request.
 
 To install the application run:
 npm install
+
+##Testing using Postman
+![Test example][testing.png]

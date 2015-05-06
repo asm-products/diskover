@@ -6,6 +6,7 @@
 var express     = require('express');       // call express
 var app         = express();                // define our app using express
 var bodyParser  = require('body-parser');
+var qs          = require('querystring');
 
 //configure app to use body-parser()
 //this will let us get data from a POST 
@@ -39,9 +40,22 @@ router.get('/', function(req, res) {
 // ===========================================================================
 router.route('/event')
   // create a event (accessed at POST http://localhost:8080/api/event)
-  .post(function(req, res) {
-      res.json({ message : 'post event'});
-  })
+    .post(function(req, res) {
+        console.log("- Post event");
+        var name = req.body.name;
+        var place = req.body.place;
+        var time = req.body.time;
+        var picture = req.body.picture;
+        var price = req.body.price;
+
+        console.log("Request name: " + name);
+        console.log("Request place: " + place);
+        console.log("Request time: " + time);
+        console.log("Request picture: " + picture);
+        console.log("Request price: " + price);
+
+        res.json({ message : 'post event'});
+    })
 
   .get(function(req, res) {
       res.json({ message: 'get event'});
