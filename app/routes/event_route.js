@@ -1,11 +1,11 @@
 
-  // on routes that end in /bears
+  // on routes that end in /event
   //  ===========================================================================
   // call the packages we need 
-  console.log('Bear extracted');
+  console.log('Event extracted');
   
   
     exports.list = function(req, res){
-        console.log('Bear listed');
+        console.log('Event listed');
     };
 
