@@ -42,23 +42,29 @@ router.route('/event')
   // create a event (accessed at POST http://localhost:8080/api/event)
     .post(function(req, res) {
         console.log("- Post event");
-        var name = req.body.name;
-        var place = req.body.place;
-        var time = req.body.time;
-        var picture = req.body.picture;
-        var price = req.body.price;
 
-        console.log("Request name: " + name);
-        console.log("Request place: " + place);
-        console.log("Request time: " + time);
-        console.log("Request picture: " + picture);
-        console.log("Request price: " + price);
+        var event = new Event();
+        event.event_name = req.body.name;
+        event.event_place = req.body.place;
+        event.event_time = req.body.time;
+        event.event_picture = req.body.picture;
+        event.event_price = req.body.price;
 
-        res.json({ message : 'post event'});
+        // save the event and check for errors
+        event.save(function(err){
+            if(err)
+                res.send(err);
+            res.json({ message: 'Event created!'});
+        });
+    
     })
 
   .get(function(req, res) {
-      res.json({ message: 'get event'});
+      Event.find(function(err, events){
+        if (err)
+            res.send(err);   
+        res.json(events);
+      });
   });
 
 // REGISTER OUR ROUTES -------------------------------

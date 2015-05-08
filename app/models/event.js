@@ -1,5 +1,7 @@
 //app/models/event.js
 
+console.log("Enter in event.js");
+
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
