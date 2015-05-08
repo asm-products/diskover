@@ -29,5 +29,5 @@ npm install
 ![alt text](./testing.png "Logo Title Text 1")
 
 
-Useful resource:  [https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4](Scotch).
+Useful resource:  [Scotch](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4).
 
