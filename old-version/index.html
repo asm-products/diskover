@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Diskover</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,900" type="text/css">
+  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <script id="template" type="text/x-handlebars-template">
+      <div class="inner cover">             
+        <div class="container">
+            <div id="row">
+              {{#if poster_image_url}}
+                <a href="https://assembly.com/{{slug}}">
+                  <img src={{poster_image_url}} width="80px">
+                </a>
+              {{/if}}
+              </div>
+              <div id="row">
+              <div class="col-sm-4"></div>   
+              <div class="col-sm-4">
+              <h1 class="masthead-brand"><strong>{{name}}</strong></h1>
+              </div>
+              <div class="col-sm-4"></div>
+              </div>
+              </div>
+          </div>
+          <div id="row">
+            
+              <h2 class="masthead-subtitle">{{pitch}}</h2>
+            </div>
+          <div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+              <p>This product is build by <a href="//assembly.com">Assembly</a>.</p>
+              <p><em>The simplest way to describe Diskover is by saying that it is focused on <strong>giving to the user all the near activities that he can find on any interest</strong></em>.<br>
+            Simplifying things, using the application the user will slideshow previews of events in his area, when he does not like it or is not interested on the event that is displayed he just has to click on a <strong>Next button </strong>to see a new one and when he does like it he has to click to the <strong>Diskover button</strong>, that will send him to the details page for that event.<br>
+              During these actions done by the user, the application will collect the user information to be able to profile the user in order to show better suggestions next time.<br>
+So as a user, I will be able to find what I am really interested on that is happening around me because the application is tracking my favorites events and the events that I was not interested on.  <br>
+This part will be the core and in my opinion is what will give a plus to it.<br><br></p>
+              <h3><strong>How Assembly Works</strong></h3><br>
+<p>Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.<br>
+Visit <a href="//assembly.com">Assembly</a> to learn more.</p>
+          </div>
+					</div>
+        </div>
+  
+
+        <style>
+          .alert {
+             z-index: 9000; position: absolute; width: 300px; margin-left: -180px; left: 50%;
+          }
+        </style>
+
+        <div class="alert alert-success alert-dismissible" role="alert" style="display: none;">
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h3>Successfully subscribed to {{name}} updates</h3>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h3>There was a problem adding you to the mailing list. Please try again later.</h3>
+        </div>
+
+        <form id="email-signup" class="form-inline" role="form" data-url="https://assembly.com/api/products/{{slug}}/potential_users">
+          <div class="form-group form-group-lg">
+            <label class="sr-only" for="email">Email address</label>
+            <input class="email form-control input-lg" type="email" name="email" placeholder="Email me when it's ready" style="min-width: 300px; text-align: center;">
+          </div>
+          <button type="submit" class="btn btn-default btn-lg">&gt;</button>
+        </form>
+
+        <h2 class="cover-heading">Core Team</h2>
+        <ul class="list-inline">
+          {{#each core_team}}
+            <li>
+              <a href="https://assembly.com/users/{{username}}">
+                <img src={{avatar_url}} class="img-circle">
+                <h5>{{username}}</h5>
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+          Made with ♥ on <a href="//assembly.com">Assembly</a></br>
+  Layout based on the Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</br>
+  Pictures &copy;Lina Parziale &copy;Marcin Mosiolek .
+        </div>
+    </div>
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $.get('https://assembly.com/api/products/diskover/info')
+        .done(function(data) {
+          var name = data.name;
+          var slug = data.slug;
+          var pitch = data.pitch;
+          var description = data.description;
+          var poster_image_url = data.poster_image_url;
+          var core_team = data.core_team;
+
+          if (poster_image_url.indexOf('default_poster.jpg') > -1) {
+            poster_image_url = 'https://assembly.com' + poster_image_url;
+          }
+
+          document.title = name;
+
+          var source = $('#template').html();
+          var template = Handlebars.compile(source);
+          var html = template({
+            name: name,
+            slug: slug,
+            pitch: pitch,
+            description: description,
+            poster_image_url: poster_image_url,
+            core_team: core_team || []
+          });
+
+          $('.site-wrapper-inner').html(html);
+
+          // attach submit listener
+          $('#email-signup').submit(function(e) {
+            e.preventDefault();
+
+            subscribe($(this));
+          });
+        
+        }).fail(function(err) {
+          console.error(err);
+        });
+    });
+
+    function subscribe($form) {
+      var path = $form.data('url');
+      var data = {
+        email: $form.find('input[name="email"]').val()
+      };
+
+      $form.find('input[name="email"]').val('');
+
+      $.post(path, data)
+        .done(function(data) {
+          $form.find('input[name="email"]').val('');
+          $('.alert-success').fadeTo(100, 1);
+          $('.alert-success').fadeTo(10*1000, 0);
+        })
+        .fail(function(err) {
+          $('.alert-danger').fadeTo(100, 1);
+          $('.alert-danger').fadeTo(10*1000, 0);
+        });
+    }
+
+  </script>
+</body>
+</html>
