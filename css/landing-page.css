@@ -4,6 +4,19 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css);
+
+/*  
+// From http://bootsnipp.com/snippets/featured/newsletter-subscribe
+//
+// Updated to boostrap 3 + Fontawesome 4
+//
+*/
+input.btn-primary {
+  margin-top: 15px;
+}
+
 body,
 html {
     width: 100%;
@@ -35,8 +48,9 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/diskover_background.png) no-repeat center center;
+    background: url(../img/888.jpeg) no-repeat center center;
     background-size: cover;
+	/*height: 500px; */
 }
 
 .intro-message {
@@ -116,7 +130,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/concert.jpg) no-repeat center center;
     background-size: cover;
 }
 
